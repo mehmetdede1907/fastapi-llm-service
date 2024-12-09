@@ -1,3 +1,4 @@
+# app/services/llm.py
 from anthropic import Anthropic
 from app.core.config import get_settings
 from app.core.logging import setup_logging
@@ -14,7 +15,7 @@ class LLMService:
         try:
             logger.info(f"Sending request to Claude with prompt length: {len(prompt)}")
             
-            # Create message without await
+            # Create the message - remove await
             response = self.client.messages.create(
                 model="claude-3-opus-20240229",
                 max_tokens=max_tokens,
@@ -24,8 +25,11 @@ class LLMService:
                 }]
             )
             
+            # Extract the response text and ensure it's a string
+            completion_text = str(response.content[0].text)
+            
             logger.info(f"Received response from Claude")
-            return response.content[0].text
+            return completion_text
             
         except Exception as e:
             logger.error(f"Error in LLM service: {str(e)}")

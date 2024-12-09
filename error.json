@@ -1,0 +1,109 @@
+{
+    "error1":{
+        "span": {
+          "Timestamp": "2024-12-09 10:55:57.122524000",
+          "TraceId": "7ff8a75f2669eb05f04aaa0338ee639b",
+          "SpanId": "627fb021bffe2cdd",
+          "ParentSpanId": "",
+          "TraceState": "",
+          "SpanName": "POST /chat/completion",
+          "SpanKind": "SPAN_KIND_SERVER",
+          "ServiceName": "fastapi-quickstart-app2",
+          "ResourceAttributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.28.2",
+            "service.name": "fastapi-quickstart-app2",
+            "telemetry.auto.version": "0.49b2"
+          },
+          "ScopeName": "opentelemetry.instrumentation.fastapi",
+          "ScopeVersion": "0.49b2",
+          "SpanAttributes": {
+            "http.host": "127.0.0.1:8000",
+            "net.peer.port": "63001",
+            "net.host.port": "8000",
+            "infrastack-environment-id": "4a81c1dc-0b58-4a00-ae1d-7e61a7e78e66",
+            "http.method": "POST",
+            "http.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0...",
+            "infrastack-organization-id": "wx7uk7g7i32s9dt5",
+            "http.scheme": "http",
+            "http.flavor": "1.1",
+            "http.url": "http://127.0.0.1:8000/chat/completion",
+            "http.route": "/chat/completion",
+            "http.status_code": "422",
+            "http.target": "/chat/completion",
+            "http.server_name": "127.0.0.1:8000",
+            "net.peer.ip": "127.0.0.1"
+          },
+          "Duration": "994000",
+          "StatusCode": "STATUS_CODE_UNSET",
+          "StatusMessage": "",
+          "Events": {
+            "Timestamp": [],
+            "Name": [],
+            "Attributes": []
+          },
+          "Links": {
+            "TraceId": [],
+            "SpanId": [],
+            "TraceState": [],
+            "Attributes": []
+          }
+        },
+        "logs": []
+      },
+      "error2":{
+        "span": {
+          "Timestamp": "2024-12-09 11:00:02.790973000",
+          "TraceId": "797ffdcd3f11c7242b8476aacf1211d3",
+          "SpanId": "2c060ff1b0051dbb",
+          "ParentSpanId": "",
+          "TraceState": "",
+          "SpanName": "POST /auth/token",
+          "SpanKind": "SPAN_KIND_SERVER",
+          "ServiceName": "fastapi-quickstart-app2",
+          "ResourceAttributes": {
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.28.2",
+            "service.name": "fastapi-quickstart-app2",
+            "telemetry.auto.version": "0.49b2",
+            "telemetry.sdk.language": "python"
+          },
+          "ScopeName": "opentelemetry.instrumentation.fastapi",
+          "ScopeVersion": "0.49b2",
+          "SpanAttributes": {
+            "http.method": "POST",
+            "http.status_code": "401",
+            "http.host": "127.0.0.1:8000",
+            "http.url": "http://127.0.0.1:8000/auth/token",
+            "infrastack-organization-id": "wx7uk7g7i32s9dt5",
+            "infrastack-environment-id": "4a81c1dc-0b58-4a00-ae1d-7e61a7e78e66",
+            "net.host.port": "8000",
+            "http.target": "/auth/token",
+            "http.server_name": "127.0.0.1:8000",
+            "net.peer.ip": "127.0.0.1",
+            "http.route": "/auth/token",
+            "http.scheme": "http",
+            "http.flavor": "1.1",
+            "http.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0...",
+            "net.peer.port": "63025"
+          },
+          "Duration": "3499000",
+          "StatusCode": "STATUS_CODE_UNSET",
+          "StatusMessage": "",
+          "Events": {
+            "Timestamp": [],
+            "Name": [],
+            "Attributes": []
+          },
+          "Links": {
+            "TraceId": [],
+            "SpanId": [],
+            "TraceState": [],
+            "Attributes": []
+          }
+        },
+        "logs": []
+      }
+      
+}
