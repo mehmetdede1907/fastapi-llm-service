@@ -14,7 +14,8 @@ async def get_completion(
     current_user: str = Depends(get_current_user)
 ):
     try:
-        completion = await llm_service.get_completion(
+        # Remove await from the service call
+        completion = llm_service.get_completion(
             prompt=request.prompt,
             max_tokens=request.max_tokens
         )
