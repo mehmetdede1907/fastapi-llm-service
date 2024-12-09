@@ -10,10 +10,12 @@ class LLMService:
         self.client = Anthropic(api_key=settings.ANTHROPIC_API_KEY)
     
     async def get_completion(self, prompt: str, max_tokens: int = 1000):
+        """Get completion from Claude with telemetry tracking"""
         try:
             logger.info(f"Sending request to Claude with prompt length: {len(prompt)}")
             
-            response = await self.client.messages.create(
+            # Create message without await
+            response = self.client.messages.create(
                 model="claude-3-opus-20240229",
                 max_tokens=max_tokens,
                 messages=[{
@@ -22,7 +24,7 @@ class LLMService:
                 }]
             )
             
-            logger.info(f"Received response from Claude with {response.usage.total_tokens} tokens")
+            logger.info(f"Received response from Claude")
             return response.content[0].text
             
         except Exception as e:
